@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+.strikethrough {
+    position: relative; /* 線を描画する基準点になります */
+    display: inline; /* 文字の幅に合わせます */
+}
+
+.strikethrough::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%; /* 線の長さは文字の幅いっぱいに */
+    height: 2px; /* 線の太さ */
+    background-color: currentColor; /* 文字と同じ色にします */
+    transform: scaleX(0); /* 最初は線の幅を0にして隠しておきます */
+    transform-origin: left; /* 左側を起点に線が伸びるようにします */
+    transition: transform 0.5s ease-in-out; /* 0.5秒かけてにゅるっと変化させます */
+}
+
+/* このクラスが付いたら、線をにゅるっと伸ばします */
+.strikethrough.animate-strike::after {
+    transform: scaleX(1); /* 線の幅を100%に戻します */
+}
