@@ -13,13 +13,13 @@ type CardTask = {
 }
 
 const initialSeaTasks = [
-    {id: 101, title: "https://github.com/Hirumiya-Tower?tab=repositoriesにアクセスする"},
+    {id: 101, title: "https://github.com/Hirumiya-Tower/Gardener-appにアクセスする"},
     {id: 102, title: "Readmeを確認する"},
-    {id: 103, title: "アルファ版の試用を開始する"},
+    {id: 103, title: "α版の試用を開始する"},
 ]
 
 const initialCardTasks = [
-    {id: 1, title: "牛乳を買う", priority: 2, deadline: "今日の夕方"}
+    {id: 1, title: "さあ、はじめよう！", priority: 3, deadline: null}
 ]
 
 export default  function App() {
